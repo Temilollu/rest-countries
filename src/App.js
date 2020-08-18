@@ -21,12 +21,20 @@ class App extends React.Component {
       .then(data => this.setState({allCountries : data}))
     }
  
+    albumDetail = (props) => {
+      // console.log(props);
+      return (
+        <div>
+          <h1>TOPIC DETAIL PAGE :</h1>
+        </div>
+      );
+    }
   render(){
     return (  
        <div className="App">
         <Switch>
-         <Route exact path='/rest-countries' component={HeaderTwo}/>
-         <Route  exact path='/rest-countries/:id' 
+         <Route  path='/' component={HeaderTwo}/>
+         <Route   path='/rest-countries:id' 
                  render={ (props) => (
                     <FullDetails
                       {...props}

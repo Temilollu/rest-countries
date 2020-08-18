@@ -19,7 +19,7 @@ class Country extends React.Component{
         const { countryData, history, match  } = this.props 
         console.log(this.props)
         return( 
-            <div className="col mb-4" onClick={() => history.push(`${match.url}/${countryData.name}`)} >
+            <div className="col mb-4" onClick={() => history.push(`${match.url}${countryData.name}`)} >
             <div className="card">
               <img src={countryData.flag} className="card-img-top" alt="..."/>
               <div className="card-body">
